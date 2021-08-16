@@ -77,7 +77,34 @@ but has gotten even worse at predicting "1".
 
 The scores have gotten slightly better after improving some parameters. The model is still overfitting though, and the improvement on predicting "1" is small.
 
+#### 4. Combined two datasets into one, splitting them up using train_test_split from sklearn.
+Before train_test_split I now have a DataFrame of shape: (48842, 15)
 
+| Metric                            | Score  |
+|-----------------------------------|--------|
+| Score on training set             | 0.999  |
+| Score on testing set              | 0.858  |
+| cross_validation_score - Accuracy | 85.68% |
+| Matthews correlation coefficient  | 0.592  |
+
+![](Visuals/Confusion%20matrix%20-%20own%20train_test_split.png)
+
+No noticeable improvements, but hasn't gotten noticeably worse either.
+
+#### 5. Balanced the dataset by copying rows that contain target "1".
+
+Before train_test_split I now have a DataFrame of shape: (72216, 15)
+
+| Metric                            | Score  |
+|-----------------------------------|--------|
+| Score on training set             | 0.999  |
+| Score on testing set              | 0.933  |
+| cross_validation_score - Accuracy | 91.58% |
+| Matthews correlation coefficient  | 0.872  |
+
+![](Visuals/Confusion%20matrix%20-%20evenly%20distributed%20classes.png)
+
+All scores increased by a significant amount. This also improved the predicting of target "1".
 
 
 # Contributors

@@ -35,12 +35,12 @@ def normalizing_array(array:np.ndarray) -> np.ndarray:
 
 def predicting_scoring_model(forest_fitted: RandomForestClassifier, X_train: np.ndarray, y_train: np.ndarray,
                                              X_test: np.ndarray, y_test: np.ndarray,
-                                             model_title: str):
+                                             confusion_matrix_title: str):
     """ Prints and plots different model evaluations techniques.
 
     Prints the score on the training set, the score on the test set,
     the cross-validation-score, Matthews-corrcoëf,
-    and plots the confusion matrix.
+    and plots the confusion matrix with title as parameter.
 
     :return Fitted RandomForestClassifier-model. """
 
