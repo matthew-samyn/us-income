@@ -91,9 +91,18 @@ Before train_test_split I now have a DataFrame of shape: (48842, 15)
 
 No noticeable improvements, but hasn't gotten noticeably worse either.
 
-#### 5. Balanced the dataset by copying rows that contain target "1".
+#### 5. Modeling a balanced dataset.
+What I'm noticing is that the model is always having problems predicting "1".   
+The dataset is also very unbalanced, meaning a lot more datapoints with target "0".  
+This shows the distribution on the data, containing 48842 rows:
 
-Before train_test_split I now have a DataFrame of shape: (72216, 15)
+![](Visuals/Distribution_classes.png)
+
+By copying the rows that have as target "1", I can obtain a much more balanced dataset.  
+The result is I now have a dataset with 72216 rows, but almost evenly distributed:
+
+![](Visuals/Even_distribution_classes.png)
+
 
 | Metric                            | Score  |
 |-----------------------------------|--------|
@@ -104,7 +113,9 @@ Before train_test_split I now have a DataFrame of shape: (72216, 15)
 
 ![](Visuals/Confusion%20matrix%20-%20evenly%20distributed%20classes.png)
 
-All scores increased by a significant amount. This also improved the predicting of target "1".
+Balancing the dataset out, helped a lot!  
+All scores increased by a significant amount.  
+This also finally improved the predicting of target "1".
 
 
 # Contributors
