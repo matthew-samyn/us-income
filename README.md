@@ -108,7 +108,7 @@ The result is I now have a dataset with 72216 rows, but almost evenly distribute
 |-----------------------------------|--------|
 | Score on training set             | 0.999  |
 | Score on testing set              | 0.933  |
-| cross_validation_score - Accuracy | 91.58% |
+| cross_validation_score - Accuracy | 91.85% |
 | Matthews correlation coefficient  | 0.872  |
 
 ![](Visuals/Confusion%20matrix%20-%20evenly%20distributed%20classes.png)
