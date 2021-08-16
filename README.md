@@ -35,7 +35,7 @@ train and test.
 
 
 # Findings
-#### 1. Creating baseline model using RandomForestClassifier
+### 1. Creating baseline model using RandomForestClassifier
 
 | Metric                            | Score  |
 |-----------------------------------|--------|
@@ -50,7 +50,7 @@ We can clearly see that the model is overfitting when comparing to cross_validat
 The model does a really bad job at predicting "1".
 
 
-#### 2. Modeling with normalized data.
+### 2. Modeling with normalized data.
 
 | Metric                            | Score  |
 |-----------------------------------|--------|
@@ -65,7 +65,7 @@ The score has dropped in every way.
 Looking at the confusion matrix, we notice that it has gotten slightly better at predicting "0",  
 but has gotten even worse at predicting "1".
 
-#### 3. Looking for better parameters, using RandomizedSearchCV
+### 3. Looking for better parameters, using RandomizedSearchCV
 | Metric                            | Score  |
 |-----------------------------------|--------|
 | Score on training set             | 0.999  |
@@ -77,7 +77,7 @@ but has gotten even worse at predicting "1".
 
 The scores have gotten slightly better after improving some parameters. The model is still overfitting though, and the improvement on predicting "1" is small.
 
-#### 4. Combined two datasets into one, splitting them up using train_test_split from sklearn.
+### 4. Combined two datasets into one, splitting them up using train_test_split from sklearn.
 Before train_test_split I now have a DataFrame of shape: (48842, 15)
 
 | Metric                            | Score  |
@@ -91,7 +91,7 @@ Before train_test_split I now have a DataFrame of shape: (48842, 15)
 
 No noticeable improvements, but hasn't gotten noticeably worse either.
 
-#### 5. Modeling a balanced dataset.
+### 5. Modeling a balanced dataset.
 What I'm noticing is that the model is always having problems predicting "1".   
 The dataset is also very unbalanced, meaning a lot more datapoints with target "0".  
 This shows the distribution on the data, containing 48842 rows:
