@@ -94,12 +94,11 @@ No noticeable improvements, but hasn't gotten noticeably worse either.
 ### 5. Modeling a balanced dataset.
 What I'm noticing is that the model is always having problems predicting "1".   
 The dataset is also very unbalanced, meaning a lot more datapoints with target "0".  
-This shows the distribution on the data, containing 48842 rows:
+This shows the distribution on the data:
 
 ![](Visuals/Distribution_classes.png)
 
 By copying the rows that have as target "1", I can obtain a much more balanced dataset.  
-The result is I now have a dataset with 72216 rows, but almost evenly distributed:
 
 ![](Visuals/Even_distribution_classes.png)
 
@@ -107,15 +106,13 @@ The result is I now have a dataset with 72216 rows, but almost evenly distribute
 | Metric                            | Score  |
 |-----------------------------------|--------|
 | Score on training set             | 0.999  |
-| Score on testing set              | 0.933  |
-| cross_validation_score - Accuracy | 91.85% |
-| Matthews correlation coefficient  | 0.872  |
+| Score on testing set              | 0.843  |
+| cross_validation_score - Accuracy | 91.83% |
+| Matthews correlation coefficient  | 0.583  |
 
-![](Visuals/Confusion%20matrix%20-%20evenly%20distributed%20classes.png)
+![](Visuals/Confusion%20matrix%20-%20evenly_distributed_train.png)
 
-Balancing the dataset out, helped a lot!  
-All scores increased by a significant amount.  
-This also finally improved the predicting of target "1".
+Not much improvement, using oversampling.
 
 
 # Contributors

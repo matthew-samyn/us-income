@@ -65,5 +65,5 @@ matthews_corrcoef:""")
 
     # Plotting confusion matrix
     plot_confusion_matrix(forest_fitted, X_test, y_test, values_format = '.0f')
-    plt.title(f"Confusion matrix on {model_title}")
+    plt.title(f"Confusion matrix on {confusion_matrix_title}")
     plt.show()
